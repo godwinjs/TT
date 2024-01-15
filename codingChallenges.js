@@ -67,3 +67,18 @@ console.log("Example 1", stringRules(["5", "2", "C", "D", "+"]))
 console.log("Example 2", stringRules(["5", "-2", "4", "C", "D", "9", "+", "+"]))
 console.log("Example 3", stringRules(["1"]))
 console.log('Baseball String rules coding challenge end...')
+
+
+/*
+    Numbers are represented by seven symbols: @, #, $, %, &, +, and ~
+    Symbol Value
+    @       1
+    #       5                    
+    $       10
+    %       50
+    &       100
+    +       500
+    ~       1000
+
+    For example, 15 is written as $#, which is simply $ + #. The number 
+*/
