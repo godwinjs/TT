@@ -152,5 +152,5 @@ console.log("1");
  }
 
  for( const key of Object.keys(introspection)){
-    console.log(key)
+    console.log(introspection.intro)
  } 
