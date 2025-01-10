@@ -45,32 +45,14 @@ Plan
 */
 
 /**
- * Helper function to get prime factors of a number
- * @param {number} num - The input number
- * @returns {number[]} - An array of prime factors
- */
-function getPrimeFactors(num) {
-    let factors = [];
-    let divisor = 2;
-    
-    while (num >= 2) {
-        if (num % divisor === 0) {
-            factors.push(divisor);
-            num = num / divisor;
-        } else {
-            divisor++;
-        }
-    }
-    return factors;
-}
-
-/**
  * Function to find the smallest number n can become
  * @param {number} n - The input number
  * @returns {number} - The smallest number after breaking down repeatedly
  */
 
-function smallestValue(n) {
+import { getPrimeFactors } from "./utils/getPrimeFactors";
+
+export function smallestValue(n) {
     while (true) {
         let factors = getPrimeFactors(n);
         let sum = factors.reduce((acc, val) => acc + val, 0);

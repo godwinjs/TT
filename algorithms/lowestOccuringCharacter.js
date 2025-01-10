@@ -2,11 +2,11 @@ console.log('Shortest character algorithm coding challenge start...')
 
 /* create a function thet returns the Lowest character in a string */
 
-function lowestOccurringChar1 (str) {
+export function lowestOccurringChar1 (str) {
   if (!str) {
     return ""; // Handle empty string case
   }
-  
+
     let charArr = []
     let countArr = []
 
@@ -23,7 +23,7 @@ function lowestOccurringChar1 (str) {
     return charArr[countArr.indexOf(Math.min(...countArr))]
 }
 
-function lowestOccurringChar2(str) {
+export function lowestOccurringChar2(str) {
     if (!str) {
       return ""; // Handle empty string case
     }
@@ -58,8 +58,3 @@ function lowestOccurringChar2(str) {
 // console.timeEnd('lowestOccurringChar')
 
 console.log('Shortest character algorithm coding challenge end...')
-
-module.exports = {
-  lowestOccurringChar1,
-  lowestOccurringChar2
-}
