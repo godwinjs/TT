@@ -1,0 +1,12 @@
+{
+  "name": "turingtest",
+  "version": "1.0.0",
+  "description": "Turing test enviroment",
+  "main": "codingChallenges.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon codingChallenges.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
