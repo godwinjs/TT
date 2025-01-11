@@ -2,12 +2,16 @@
   "name": "turingtest",
   "version": "1.0.0",
   "description": "Turing test enviroment",
-  "main": "codingChallenges.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon codingChallenges.js"
+    "dev": "nodemon ./job_portal/index.jsx"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "create-react-app": "^5.0.1",
+    "nodemon": "^3.1.9"
+  }
 }
