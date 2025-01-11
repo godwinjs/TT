@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+REACT CHALLENGE
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+JOB PORTAL
+Background Story: Create a Mini Job Portal for recruiters and job seekers. Job seekers register profiles, while recruiters search for candidates.
+Features
+-Job seekers provide name, email, role, and skills. Recruiters search for candidates by skills.
+Email addresses must be unique.
+• Profiles displayed as cards.
+Pages
+This website should have three pages, namely the home page, candidate registration page, and candidate list page, each having a navbar. Below are the required specifications:
+Home Page
+- Route: /
+- Navbar with "Job Portal" title.
+-Buttons- "Candidate List" and "Candidate Registration" should direct the user to the corresponding page. The "Candidate List" button should also show the total candidate profiles in parenthesis.
+Candidate Registration
+Route: /candidate/registration
+• A navbar with the heading "Job Portal" and two buttons - Candidate List and Home - should navigate the user to the corresponding pages.
+✓ components
+JS Candidate Lists
+JS CandidateRegistration.js
+JS Home.js
+Navbarjs
+JS ProfileCard.js
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+Render Navigation buttons on the neader with below conditions and Kender Header
+Tille Job Portal on the home, list, and registration page.
+1.1 Render Navigation buttons on the header with below conditions: Home Screen (7)-does not show any buttons on the header. Registration Screen (/candidate/registration) - has "Home" and "Candidate List" button on the header
+•List Screen (/candidate/list")- has "Home" and "Candidate Registration" button on the header
+1.2 Ensure that the header title is set to "Job Portal" on the home, list, and registration
+page.
+The Test case ID is missing (you get Testcase Id from ID table). The title must be Job Portal.
+1.3 Check if the Registration form is rendered or not (name, role, email, skills, submit, reset, add).
+•Ensure that the Test case ID is given to the fields.
+. Check if name, email, role, and skill use input HTML elements.
+. Check if submit, reset, and skill use button HTML elements.
+Task 2
+2.1 The "Add skill button must follow these conditions:
+The "Add skill' button is disabled until the candidate enters at least one value in the skill input field.
+• The "Add skill" button is enabled until the candidate has a maximum of 5 skills.
+2.2 Validate the Form
+All the fields on the form are required (Name, Role, Email, Skills).
+Name: Should be a valid string, containing only letters, numbers, and spaces.
+• Role: Should be a valid string, containing only letters, numbers, and spaces. Email: Should be a valid email address (e.g., example@email.com).
+Skills: Should be a valid array of skills, separated by commas or spaces.
+Create Express.js App
+"
+At least one skill is required to register successfully.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+user adds a skill to the skill input and clicks on add skill button, a tag appears below the input box with the name of the skill the user typed. The form should have a submit button and a Reset button.
+The submit button will be disabled until the name, role, and email fields are non- emply and no skills have been added.
+If the user registers with an already existing email id, registration should fail, and
+a registration status message should be displayed: "Email already exists". The maximum number of skills that can be added is 5.
+Upon successful registration, a registration status message should be displayed below the form: "Candidate profile created".
+Candidate List
+• Route: /candidate/list
+- A navbar with the heading "Job Portal" and two buttons - Candidate Registration and Home - should navigate the user to the corresponding pages.
+It should contain a list of profile cards with the name of the candidate, the role they are interested in, email, and skills in the form of tags.
+-A search bar that searches through the list of profile cards based on their skills. For example, if "react" is searched, all profiles with the skill tag "react" should appear. There should also be an All button beside the search button, showing all the available profile cards when clicked.
+-A title that shows the number of profiles found after the search. For example, searching a skill result in 5 profile cards should show "5 profiles found" and 0 in case of zero profiles found. Initially, it should show the number of total available profile cards.
