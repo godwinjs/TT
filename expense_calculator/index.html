@@ -7,7 +7,31 @@
     <link rel="stylesheet" href="./index.css" />
 </head>
 <body>
-    <h1>Hello World</h1>
+    <div class="app">
+        <h1>Expense Calculator</h1>
+        <form id="expense-form">
+          <input type="text" id="title" placeholder="Expense Title" required />
+          <input type="number" id="amount" placeholder="Amount (USD)" required />
+          <input type="date" id="date" required />
+          <button type="submit" id="submit-btn">Add</button>
+        </form>
+        <p id="message"></p>
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Amount</th>
+              <th>Date</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="expense-list">
+            <!-- Dynamic rows here -->
+          </tbody>
+        </table>
+        <button id="sort-date">Sort by Date</button>
+        <button id="sort-amount">Sort by Amount</button>
+      </div>
 
     <script src="./index.js"></script>
 </body>
